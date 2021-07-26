@@ -2,10 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-<div>Curso React
-    <ul>
-        <li>Uno</li>
-    </ul>
+<div>Primera entrega
 </div>,
 document.getElementById('root')
 );
