@@ -1,8 +1,8 @@
-import SaludableLogo from './SaludableLogo.png';
+import ImgCart from './Cart.png';
 
-export const LogoSaludable = () =>{
+export const LogoCart = () =>{
     return (
-        <img src={SaludableLogo} alt=""/>
+        <img src={ImgCart} style={{width: 60}}/>
     );
     
 }

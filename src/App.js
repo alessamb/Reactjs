@@ -1,10 +1,11 @@
 import React from 'react';
 import {NavBar} from './components/navBar';
-import {Carru} from './containers/ItemListContainer';
+import {ItemListContainer} from './containers/ItemListContainer.js';
+
 function App(){
     return ( <div>
         <NavBar/>
-        <Carru/>
+        <ItemListContainer/>
     </div>)
 }
 export default App;
