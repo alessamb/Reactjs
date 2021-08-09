@@ -3,6 +3,8 @@ import Carru1 from './ImgCarru1.png';
 import Carru2 from './ImgCarru2.png';
 import Carru3 from './ImgCarru3.png';
 import {Carousel} from 'react-bootstrap';
+import ItemCount from './ItemCount.js';
+
 
 export const ItemListContainer = () => {
     return (
@@ -67,8 +69,8 @@ export const ItemListContainer = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
+            <ItemCount contador="1" stock="10"/>
         </div>
     );
 }

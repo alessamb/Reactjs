@@ -2,8 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Form, Button } from 'react-bootstrap';
 import './style.css';
 import SaludableLogo from './SaludableLogo.png';
-import { LogoCart } from '../containers/CartWidget.js';
-
+import { LogoCart } from '../../containers/CartWidget.js';
 
 export const NavBar = () => {
 
