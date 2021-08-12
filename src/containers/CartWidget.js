@@ -2,7 +2,11 @@ import ImgCart from './Cart.png';
 
 export const LogoCart = () =>{
     return (
-        <img src={ImgCart} style={{width: 60}}/>
+        <div>
+        <button><img src={ImgCart} style={{width: 60}}/></button>
+        <span className="item_total">0</span>
+        </div>
+        
     );
     
 }

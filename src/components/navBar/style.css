@@ -11,3 +11,8 @@
     width: 308px;
     height: 36px;
 }
+.ml-auto{
+
+    position: relative;
+    cursor: pointer;
+}

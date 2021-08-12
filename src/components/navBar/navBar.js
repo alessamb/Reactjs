@@ -8,10 +8,9 @@ export const NavBar = () => {
 
     return (
         <div>
-            <div className="hola">
+            <div>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center reset">
                     <div className="d-flex align-items-center col-md-8 reset">
-                        {/*  <LogoSaludable />*/}
                         <img src={SaludableLogo} alt="" />
 
                         < div className="collapse navbar-collapse d-flex">
