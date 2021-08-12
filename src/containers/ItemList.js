@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Item } from './Item.js'
-
+import ImgList from './ImgList1.png'
 export const ItemList = () => {
     const [productos, setProductos] = useState([
         {
@@ -20,29 +20,34 @@ export const ItemList = () => {
         }, {
             id: "3",
             nombre: "Avena Tradicional 500gr",
-            descripcion: "Fuente de energía, proteínas, vitaminas del complejo B, hierro y fibra. Previene la constipación y anemia",
+            descripcion: "Fuente de energía, proteínas, vitaminas del complejo B, hierro y fibra.",
             precio: "600",
-            imagen: "foto3"
-
+            imagen: { ImgList }
         }
+        
 
     ])
     useEffect(() => {
         console.log(productos)
     }, [])
     return (
-        <div>
-            {productos.map((producto) => {
-                return (
-                    <Item
-                        nombre={producto.nombre}
-                        descripcion={producto.descripcion}
-                        precio={producto.precio}
-                        imagen={producto.imagen}
-                    />
-                )
-            })}
+        <div className="album py-5 bg-light">
+            <div className="container">
+                <div className="row">
+                    {productos.map((producto) => {
+                        return (
+                            <Item
+                                id={producto.id}
+                                nombre={producto.nombre}
+                                descripcion={producto.descripcion}
+                                precio={producto.precio}
+                                imagen={producto.imagen}
+                            />
+                        )
+                    })}
 
+                </div>
+            </div>
         </div>
     )
 

@@ -16,7 +16,7 @@ export const NavBar = () => {
                         < div className="collapse navbar-collapse d-flex">
                             <Form action="/search/" method="get" className="js-search-form">
                                 <input className="js-search-input desktop-search-input" autoComplete="off" type="search" name="q" placeholder="¿Qué estás buscando?" aria-label="¿Qué estás buscando?" />
-                                <Button className="glyphicon glyphicon-search" aria-hidden="true">Busqueda</Button>
+                                <button className="btn btn-sm btn-outline-warning waves-effect"  aria-hidden="true">Busqueda</button>
                             </Form>
                             <div className="ml-auto">
                                 <LogoCart />

@@ -24,15 +24,15 @@ class ItemCount extends React.Component {
             <div className="d-flex justify-content-left fixC" width="150%">
 
                 <div>
-                    <button type="button" className="btn btn-sm btn-outline-secondary" onClick={this.onRestarNumero.bind(this)}>-</button>
+                    <button type="button" className="btn btn-sm btn-outline-warning waves-effect" onClick={this.onRestarNumero.bind(this)}>-</button>
                 </div>
                 <div>
                     <p>{this.state.contador}</p>
                 </div>
                 <div>
-                    <button type="button" className="btn btn-sm btn-outline-secondary" onClick={this.onSumarNumero.bind(this)}>+</button>
+                    <button type="button" className="btn btn-sm btn-outline-warning waves-effect" onClick={this.onSumarNumero.bind(this)}>+</button>
                 </div>
-                <button type="button" className="btn btn-sm btn-outline-secondary" style={{ marginLeft: "30px" }}>Añadir al carrito</button>
+                <button type="button" className="btn btn-sm btn-outline-warning waves-effect" style={{ marginLeft: "30px" }}>Añadir al carrito</button>
 
             </div>
         );
