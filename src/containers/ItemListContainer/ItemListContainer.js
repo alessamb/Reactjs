@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import Carru1 from "./ImgCarru1.png";
-import Carru2 from "./ImgCarru2.png";
-import Carru3 from "./ImgCarru3.png";
-import { Carousel } from "react-bootstrap";
-import { ItemList } from "./ItemList.js";
+import { useEffect, useState } from 'react';
+import Carru1 from './ImgCarru1.png';
+import Carru2 from './ImgCarru2.png';
+import Carru3 from './ImgCarru3.png';
+import { Carousel } from 'react-bootstrap';
+import { ItemList } from '../ItemList/ItemList.js';
 
 
 export const ItemListContainer = () => {

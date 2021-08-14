@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Item } from './Item.js'
+import { Item } from '../Item/Item.js'
 import ImgList from './ImgList1.png'
 export const ItemList = () => {
     const [productos, setProductos] = useState([

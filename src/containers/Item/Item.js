@@ -1,4 +1,4 @@
-import ItemCount from './ItemCount.js'
+import ItemCount from '../ItemCount/ItemCount.js'
 
 
 export const Item = ({ id, nombre, descripcion, imagen, precio }) => {
