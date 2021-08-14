@@ -4,24 +4,24 @@ import Carru2 from './ImgCarru2.png';
 import Carru3 from './ImgCarru3.png';
 import { Carousel } from 'react-bootstrap';
 import { ItemList } from '../ItemList/ItemList.js';
-
+import { productos } from "../Apis/ListProductos.js";
 
 export const ItemListContainer = () => {
-  const [component, setcomponent] = useState(null);
+  const [prod, setProd] = useState([]);
 
   useEffect(() => {
-    const fetchComponent = async () => {
-      task()
-        .then((returnedComponent) => {
-          setcomponent(returnedComponent);
-        })
-        .catch((e) => {
-          console.log("Hubo un error", e);
-        });
-    };
+    const task = () =>
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(productos);
+        }, 2000);
+      });
 
-    fetchComponent();
+    task()
+      .then((result) => setProd(result))
+      .catch((e) => { console.log("Ha ocurrido un error") });
   }, []);
+
   return (
     <div>
       <div>
@@ -37,16 +37,8 @@ export const ItemListContainer = () => {
           </Carousel.Item>
         </Carousel>
       </div>
-
-      {component}
+      <ItemList productos={prod} />
     </div>
-  );
-};
 
-const task = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(<ItemList />);
-    }, 2000);
-  });
+  );
 }
