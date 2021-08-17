@@ -1,6 +1,7 @@
 import ItemCount from '../ItemCount/ItemCount.js'
+import { Link } from 'react-router-dom';
 
-export const Item = ({ id, nombre, descripcion, imagen, precio, stock}) => {
+export const Item = ({ id, nombre, descripcion, imagen, precio, stock, llave }) => {
     return (
         <>
             <div className="col-md-4" key={id}>
@@ -21,7 +22,10 @@ export const Item = ({ id, nombre, descripcion, imagen, precio, stock}) => {
                         </div>
                         <div>
                             {/* <button type="button" className="btn btn-sm btn-outline-secondary">Comprar</button> */}
-                            <ItemCount />
+                            {/*<ItemCount />*/}
+                            <Link to={`/Saludable/ItemDetailContainer/${llave}`}>
+                                <button type="button" className="btn btn-sm btn-outline-secondary">Comprar</button>
+                            </Link>
 
                         </div>
 

@@ -5,7 +5,8 @@ export const productos = [
         descripcion: "Nueces, Almendras, maní tostado sin sal, pasas de uva negras, y pasas de uva rubias",
         precio: "300",
         imagen: "foto",
-        stock : 10
+        stock : 10,   
+        llave : "2345567890"
     },
     {
         id: "2",
@@ -13,7 +14,8 @@ export const productos = [
         descripcion: "Contiene: Lino, Chía, Amaranto, Quínoa, Girasol, Mijo, Sésamo Integral",
         precio: "500",
         imagen: "foto2",
-        stock : 20
+        stock : 20,
+        llave:"36456789"
 
     }, {
         id: "3",
@@ -21,7 +23,8 @@ export const productos = [
         descripcion: "Fuente de energía, proteínas, vitaminas del complejo B, hierro y fibra.",
         precio: "600",
         imagen: { },
-        stock: 15
+        stock: 15,
+        llave:"1234567890"
     }
     
 

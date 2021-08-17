@@ -17,6 +17,7 @@ export const ItemList = ({ productos } )=> {
                                 precio={producto.precio}
                                 imagen={producto.imagen}
                                 stock ={producto.stock}
+                                llave ={producto.llave}
                             />
                         )
                     })}

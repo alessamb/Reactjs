@@ -32,8 +32,7 @@ class ItemCount extends React.Component {
                 <div>
                     <button type="button" className="btn btn-sm btn-outline-warning waves-effect" onClick={this.onSumarNumero.bind(this)}>+</button>
                 </div>
-                <button type="button" className="btn btn-sm btn-outline-warning waves-effect" style={{ marginLeft: "30px" }}>Añadir al carrito</button>
-
+                <button type="button" className="btn btn-sm btn-outline-warning waves-effect" style={{ marginLeft: "30px" }}  >Añadir al carrito</button>
             </div>
         );
     }
