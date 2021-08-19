@@ -9,8 +9,8 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         const task = () =>
-            new Promise((resolve, reject) => {  
-                    resolve(productos);
+            new Promise((resolve, reject) => {
+                resolve(productos);
             });
 
         task()
@@ -18,19 +18,16 @@ export const ItemDetailContainer = () => {
             .catch((e) => { console.log("Ha ocurrido un error") });
     }, []);
 
-    /*  return (
-      <ItemDetails productos={produ}/>
-    )*/
     return (
-        <>
+        <div>
             {
                 productos.filter(producto => producto.llave === productoID)
-                    .map((producto) => {   
+                    .map((producto) => {
                         return <ItemDetails producto={producto} />
                     })
 
             }
 
-        </>
+        </div>
     )
 }

@@ -28,7 +28,7 @@ export const NavBar = () => {
             </div>
             <Navbar>
                 <Nav className="me-auto">
-                    <Nav.Link to={"Saludable/Inicio"}>
+                    <Nav.Link to={"/"}>
                         <button className="btn">INICIO</button>
                     </Nav.Link>
                     <Nav.Link to={"Saludable/FrutasyFrutos"}>
