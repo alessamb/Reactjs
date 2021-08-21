@@ -1,14 +1,14 @@
 import ImgCart from './Cart.png';
+import { Link } from 'react-router-dom';
 
-export const LogoCart = () =>{
+export const LogoCart = () => {
     return (
-       
-        <button className="btn" >
-            <img src={ImgCart} style={{width: 60}}/>
+
+        <Link to="/Cart">
+            <img src={ImgCart} style={{ width: 60 }} />
             <span className="item_total">0</span>
-        </button>
-        
-        
+        </Link>
+
     );
-    
+
 }

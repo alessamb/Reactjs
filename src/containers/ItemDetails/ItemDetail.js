@@ -6,14 +6,17 @@ import { NavBar } from '../../components/navBar/navBar.js';
 import { Link } from 'react-router-dom';
 
 export const ItemDetails = ({ producto }) => {
-
+    const [count, setCount] = useState(1);
+    const updateCount = (event) => setCount(count + +event.target.value);
+    
+ 
     return (
         <>
             <div className="d-flex justify-content-center">
                 <div className="col-md-8 d-flex justify-content-center align-items-center noPad">
                     <div >
                         <div className="container py-3" >
-                            <div className="card" style={{ padding: "10px 0px 10px 0px", width: "1002px" }}>
+                            <div className="card" style={{ padding: "10px 0px 10px 0px", width: "1002px", borderColor: "burlywood" }}>
                                 <div className="row ">
                                     <div className="col-md-4 d-flex justify-content-center align-items-center flex-column">
                                         <img src={producto.imagen} alt="" style={{ marginTop: "30px", width: "300px", marginLeft: "55px" }} />
@@ -37,7 +40,9 @@ export const ItemDetails = ({ producto }) => {
                                                 </div>
                                             </div>
 
-                                            <ItemCount />
+                                            <ItemCount stock={producto.stock}
+                                                onAdd={updateCount}
+                                                count={count} />
 
                                         </div>
                                     </div>

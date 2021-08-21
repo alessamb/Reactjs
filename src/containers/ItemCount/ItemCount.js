@@ -1,41 +1,39 @@
-import React from 'react';
+import React from "react";
+import { useState } from "react";
 
-class ItemCount extends React.Component {
+const ItemCount = ({ stock, count, onAdd }) => {
+    debugger;
+    const [contadorInicial, setContadorInicial] = useState(count);
+    const [stockDisponible, setstockDisponible] = useState(stock);
+   
 
-    constructor(props) {
-        super(props);
-        this.state = { contador: 1, stock: 10 };
-    }
-
-    onSumarNumero() {
-        if (this.state.contador < this.state.stock) {
-            this.setState({ contador: this.state.contador + 1 });
+    function agregarCarrito2(){
+        if(contadorInicial <= stockDisponible){
+            setstockDisponible(stockDisponible - count)
+            setContadorInicial(1)
         }
-    }
+        console.log(stockDisponible)
+    } 
 
-    onRestarNumero() {
-        if (this.state.contador > 0) {
-            this.setState({ contador: this.state.contador - 1 });
-        }
-    }
 
-    render() {
-        return (
-            <div className="d-flex justify-content-left fixC" width="150%">
-
-                <div>
-                    <button type="button" className="btn btn-sm btn-outline-warning waves-effect" onClick={this.onRestarNumero.bind(this)}>-</button>
-                </div>
-                <div>
-                    <p>{this.state.contador}</p>
-                </div>
-                <div>
-                    <button type="button" className="btn btn-sm btn-outline-warning waves-effect" onClick={this.onSumarNumero.bind(this)}>+</button>
-                </div>
-                <button type="button" className="btn btn-sm btn-outline-warning waves-effect" style={{ marginLeft: "30px" }}  >Añadir al carrito</button>
+    return (
+        <div className="d-flex justify-content-left fixC" width="150%" >
+            <div >
+                <button type="button" className="btn btn-sm btn-outline-warning waves-effect"
+                    value={-1} disabled={count <= 1} onClick={onAdd} >  - </button>
             </div>
-        );
-    }
-}
-export default ItemCount;
+            <div >
+                <span className="numCount">{count}</span>
+            </div>
+            <div>
+                <button type="button" className="btn btn-sm btn-outline-warning waves-effect"
+                    value={1} disabled={count >= stock} onClick={onAdd}> + </button>
+            </div>
+            <button type="button" className="btn btn-sm btn-outline-warning waves-effect"
+                style={{ marginLeft: "30px" } } onClick={()=> {{agregarCarrito2()}}}>Añadir al carrito</button>
 
+        </div>
+    );
+};
+
+export default ItemCount;
