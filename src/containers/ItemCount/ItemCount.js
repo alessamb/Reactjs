@@ -2,20 +2,6 @@ import React from "react";
 import { useState } from "react";
 
 const ItemCount = ({ stock, count, onAdd }) => {
-    debugger;
-    const [contadorInicial, setContadorInicial] = useState(count);
-    const [stockDisponible, setstockDisponible] = useState(stock);
-   
-
-    function agregarCarrito2(){
-        if(contadorInicial <= stockDisponible){
-            setstockDisponible(stockDisponible - count)
-            setContadorInicial(1)
-        }
-        console.log(stockDisponible)
-    } 
-
-
     return (
         <div className="d-flex justify-content-left fixC" width="150%" >
             <div >
@@ -29,8 +15,8 @@ const ItemCount = ({ stock, count, onAdd }) => {
                 <button type="button" className="btn btn-sm btn-outline-warning waves-effect"
                     value={1} disabled={count >= stock} onClick={onAdd}> + </button>
             </div>
-            <button type="button" className="btn btn-sm btn-outline-warning waves-effect"
-                style={{ marginLeft: "30px" } } onClick={()=> {{agregarCarrito2()}}}>Añadir al carrito</button>
+           {/* <button type="button" className="btn btn-sm btn-outline-warning waves-effect"
+                style={{ marginLeft: "30px" } } onClick={()=> {{agregarCarrito2()}}}>Añadir al carrito</button>*/}
 
         </div>
     );
