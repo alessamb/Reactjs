@@ -27,12 +27,6 @@ export const CartContainer = () => {
                                         <td>${"123"}</td>
                                         <th scope="col">Subtotal</th>
                                         <th></th>
-                                        <button className="btn btn-sm btn-outline-warning waves-effect" value={123}
-                                            title="Borrar orden" > Eliminar</button>
-                                        <Link to={`/ItemDetailContainer/${123}`}>
-                                            <button role="link" className="btn btn-sm btn-outline-warning waves-effect"
-                                                title="Editar orden">Editar</button>
-                                        </Link>
                                     </tr>
                                 </thead>
 
@@ -42,9 +36,6 @@ export const CartContainer = () => {
                                     </tr>
                                 </tfoot>
                             </table>
-
-                            <button type="button" className="btn btn-sm btn-outline-warning waves-effect"
-                                title="Limpiar Carrito" onClick={clearCart}>Limpiar Carrito</button>
                         </div>
                     </div>
                 </div>
