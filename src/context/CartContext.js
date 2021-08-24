@@ -30,11 +30,10 @@ const CartContext = ({ children }) => {
 
     const isInCart = (id) => cart.some((item) => item.product.id === id);
 
-
+    
     return (
         <CartItemsContext.Provider
             value={{
-                cart,
                 addItem,
                 updateCart,
                 calculateTotal,

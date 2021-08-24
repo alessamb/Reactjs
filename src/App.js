@@ -13,6 +13,8 @@ function App() {
                 <NavBar />
                 <Switch>
                     <Route exact path='/' component={ItemListContainer} />
+                    /{/*prueba*/}
+                    <Route exact path="/ItemListContainer/:id" component={ItemListContainer} />
                     <Route exact path="/Cart" component={CartContainer} />
                     <Route exact path="/ItemDetailContainer/:productoID" component={ItemDetailContainer} />
                 </Switch>
