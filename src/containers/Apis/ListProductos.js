@@ -26,6 +26,15 @@ export const productos = [
         imagen: "https://elpoderdelconsumidor.org/wp-content/uploads/2015/08/Avena.jpg",
         stock: 15,
         llave:"1234567890"
+    },
+    {
+        id: "4",
+        nombre: "Avena Tradicional 250gr",
+        descripcion: "Fuente de energía, proteínas, vitaminas del complejo B, hierro y fibra.",
+        precio: "600",
+        imagen: "https://elpoderdelconsumidor.org/wp-content/uploads/2015/08/Avena.jpg",
+        stock: 15,
+        llave:"1234567890"
     }
     
 

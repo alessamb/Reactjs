@@ -1,17 +1,11 @@
-import { useParams } from "react-router-dom";
-import { productos } from "../Apis/ListProductos";
 import { useState } from "react";
 import ItemCount from '../ItemCount/ItemCount.js';
-import { NavBar } from '../../components/navBar/navBar.js';
 import { Link } from 'react-router-dom';
 import { useCartContext } from "../../context/CartContext";
 
 export const ItemDetails = ({ producto }) => {
     const [count, setCount] = useState(1);
     const updateCount = (event) => setCount(count + +event.target.value);
-
-    const [hasFinish, setFinish] = useState(false);
-    const updateFinish = () => setFinish(!hasFinish);
 
     const { addItem } = useCartContext();
     const clickHandler = () => {
@@ -52,23 +46,17 @@ export const ItemDetails = ({ producto }) => {
                                             {/* <ItemCount stock={producto.stock}
                                                 onAdd={updateCount}
                                                 count={count} /> */}
-                                            {hasFinish ? (
+                                            
                                                 <Link to="/cart">
                                                     <button style={{ marginTop: "20px" }} type="button" role="link" className="btn btn-sm btn-outline-warning waves-effect"
                                                         title="Agregar a Carrito" onClick={clickHandler}>  Agregar a Carrito</button>
                                                 </Link>
-                                            ) : (
+                                            
                                                 <ItemCount count={count} stock={producto.stock} onAdd={updateCount} />
-                                            )}
-
+                                            
                                         </div>
 
-                                        <button style={{ marginTop: "20px" }}type="button"
-                                            className={`button ${hasFinish ? "is-warning" : "is-success"
-                                                }  btn btn-sm btn-outline-warning waves-effect`} onClick={updateFinish}
-                                            title={hasFinish ? "Modificar orden" : "Confirmar orden"}>
-                                            {hasFinish ? "Modificar orden" : "Confirmar orden"}
-                                        </button>
+                                       
 
                                     </div>
                                 </div>
