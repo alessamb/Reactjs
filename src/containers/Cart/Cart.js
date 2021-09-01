@@ -9,8 +9,8 @@ export const CartContainer = () => {
     const removeFromCart = (event) => {
         const productID = event.target.value;
         removeItem(productID);
-      };
-
+    };
+      
     const generateRow = ({ product: { llave, nombre, precio }, quantity }) => {
         return (
             <tr key={llave}>

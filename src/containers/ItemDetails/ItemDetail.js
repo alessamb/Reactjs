@@ -8,6 +8,7 @@ export const ItemDetails = ({ producto }) => {
     const updateCount = (event) => setCount(count + +event.target.value);
 
     const { addItem } = useCartContext();
+   
     const clickHandler = () => {
         const newItem = { product: { ...producto }, quantity: count };
         addItem(newItem);

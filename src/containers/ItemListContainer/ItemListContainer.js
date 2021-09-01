@@ -4,12 +4,13 @@ import Carru2 from './ImgCarru2.png';
 import Carru3 from './ImgCarru3.png';
 import { Carousel } from 'react-bootstrap';
 import { ItemList } from '../ItemList/ItemList.js';
+import { useParams } from "react-router-dom";
 import { productos } from "../Apis/ListProductos.js";
+import { getFirestore } from "../Firebase/Index.js";
 
 export const ItemListContainer = () => {
-  const [prod, setProd] = useState([]);
-
-  useEffect(() => {
+/*  const [prod, setProd] = useState([]);
+ useEffect(() => {
     const task = () =>
       new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -20,8 +21,21 @@ export const ItemListContainer = () => {
     task()
       .then((result) => setProd(result))
       .catch((e) => { console.log("Ha ocurrido un error") });
-  }, []);
-
+  }, []);   */
+    const [prod, setprod] = useState([]);
+  
+    useEffect(() => {
+      const db = getFirestore();
+      const itemCollection = db.collection("Item");
+      console.log(itemCollection);
+  
+      itemCollection.get().then((querySnapshot) => {
+        if (querySnapshot.size === 0) {
+          console.log("No se encontraron productos");
+        }
+        setprod(querySnapshot.docs.map((document) => document.data()));
+      });
+    }, []);
   return (
     <div>
       <div>
