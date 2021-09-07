@@ -4,8 +4,6 @@ import Carru2 from './ImgCarru2.png';
 import Carru3 from './ImgCarru3.png';
 import { Carousel } from 'react-bootstrap';
 import { ItemList } from '../ItemList/ItemList.js';
-import { useParams } from "react-router-dom";
-import { productos } from "../Apis/ListProductos.js";
 import { getFirestore } from "../Firebase/Index.js";
 
 export const ItemListContainer = () => {

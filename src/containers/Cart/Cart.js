@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useCartContext } from "../../context/CartContext";
+import {Link } from "react-router-dom";
+import {useCartContext } from "../../context/CartContext";
+import {CartForm} from "./CartForm.js"
 
 export const CartContainer = () => {
 
@@ -91,7 +92,8 @@ export const CartContainer = () => {
                             Limpiar Carrito
                         </button>
                     </div>
-                </div>
+                    <CartForm/>
+                </div>    
             }
         </div>
     );
