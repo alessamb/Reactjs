@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Bienvenido a Saludable!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un E-commerce enfocado a la venta de comida saludable
+
 
 ## Available Scripts
 

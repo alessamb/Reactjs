@@ -1,5 +1,4 @@
 import React, { useState, createContext, useContext } from "react";
-import {getFirestore} from "../containers/Firebase/Index.js";
 
 const CartItemsContext = createContext();
 
@@ -7,6 +6,11 @@ const useCartContext = () => useContext(CartItemsContext);
 
 const CartContext = ({ children }) => {
 
+    const [UserInfo, setUserInfo] = useState({
+        nombre: "",
+        telefono: "",
+        email: "",
+      });
     const [cart, setCart] = useState([]);   
 
     const updateCart = (newCart) => {
@@ -58,51 +62,6 @@ const CartContext = ({ children }) => {
 
     const [OrdenId, setOrdenId] = useState(null);
 
-    const addOrder = () => {
-        const newOrder = {
-            buyer: {
-                name: document.getElementById('nombre').value,
-                phone: document.getElementById('telefono').value,
-                email: document.getElementById('email').value,
-                direccion : document.getElementById('direccion').value
-            },
-            items: cart.map(({ product }, quantity) => ({
-                product: {
-                    id: product.llave,
-                    nombre: product.nombre,
-                    precio: product.precio,
-                    cantidad: quantity
-                },
-           
-               
-            })),
-            total: calculateTotal()
-        };
-
-        const db = getFirestore();
-        const orders = db.collection("orders");
-        const batch = db.batch();
-
-        orders
-        .add(newOrder)
-        .then(({ id }) => {
-            cart.forEach(({product}, quantity) => {
-                const docRef = db.collection("item").doc(product.llave);
-                batch.update(docRef, {stock: product.stock - quantity})
-            });
-            batch.commit();
-            setOrdenId(id);
-            alert('¡Gracias por tu compra! 😊' +
-            'Tu pedido ha sido enviado, id de transacción: ' + id);
-            clearCart();
-            
-        })
-        .catch(err => {
-            console.log(err);
-        });
-    };
-  
-
     return (
         <CartItemsContext.Provider
             value={{
@@ -114,7 +73,7 @@ const CartContext = ({ children }) => {
                 hasItemsInCart,
                 calculateTotal,
                 clearCart, 
-                addOrder
+                 UserInfo,setUserInfo, setOrdenId
             }}
         >
             {children}
