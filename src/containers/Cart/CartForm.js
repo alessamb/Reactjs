@@ -14,7 +14,7 @@ export const CartForm = () => {
     const finalizarCompra = (event) => {
         event.preventDefault();
 
-        const newItems = cart.map(({ product: { llave, nombre, precio }, quantity }) => ({
+        const newProd = cart.map(({ product: { llave, nombre, precio }, quantity }) => ({
             llave,
             nombre,
             precio, quantity,
@@ -26,7 +26,7 @@ export const CartForm = () => {
                 Email: email,
                 Telefono: telefono,
             },
-            items: newItems,
+            items: newProd,
             total: calculateTotal(),
         };
 
@@ -56,57 +56,31 @@ export const CartForm = () => {
         <div>
             <Form className="form" onSubmit={finalizarCompra}>
                 <Row className="mb-3">
-                    <Form.Group as={Col} md="4" controlId="validationCustom01" required>
-                        <Form.Label>Nombre Y Apellido</Form.Label>
+                    <Form.Group as={Col} md="4" required>
+                        <Form.Label>Nombre y Apellido</Form.Label>
+                         <Form.Control type="text" placeholder="Nombre y apellido" name="nombre" value={nombre} onChange={handleChangeUser}/>
 
-                        <Form.Control
-                            type="text"
-                            placeholder="Nombre Y Apellido"
-                            name="nombre"
-                            value={nombre}
-                            onChange={handleChangeUser}
-                        />
-
-                        <Form.Control.Feedback>Muy Bien!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="4">
                         <Form.Label>Telefono</Form.Label>
-                        <Form.Control
-                            type="number"
-                            placeholder="Telefono"
-                            name="telefono"
-                            value={telefono}
-                            onChange={handleChangeUser}
-                        />
-                        <Form.Control.Feedback>Muy Bien!</Form.Control.Feedback>
+                        <Form.Control type="number" placeholder="123 456-7890" name="telefono" value={telefono} onChange={handleChangeUser} />
+
                     </Form.Group>
                     <Form.Group as={Col} md="4" controlId="validationCustomUsername">
                         <Form.Label>Email</Form.Label>
                         <InputGroup hasValidation>
-                            <Form.Control
-                                type="text"
-                                placeholder="Email"
-                                name="email"
-                                aria-describedby="inputGroupPrepend"
-                                value={email}
-                                onChange={handleChangeUser}
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                Por favor coloca tu Email.
-                            </Form.Control.Feedback>
+                            <Form.Control type="text" placeholder="example@email.com" name="email" aria-describedby="inputGroupPrepend"  value={email} onChange={handleChangeUser} />
                         </InputGroup>
                     </Form.Group>
                 </Row>
                 <Row className="mb-1">
                     <Form.Group as={Col} md="6" controlId="validationCustom03">
                         <Form.Label>Direccion</Form.Label>
-                        <Form.Control type="text" placeholder="Direccion" required />
-                        <Form.Control.Feedback type="invalid">
-                            Por favor coloca tu direccion.
-                        </Form.Control.Feedback>
+                        <Form.Control type="text" placeholder="Direccion" required />   
+                        
                     </Form.Group>
                 </Row>
-                <Button type="submit">Finalizar compra</Button>
+                <Button className="btn btn-sm btn-outline-warning waves-effect" style={{backgroundColor: "cornsilk"}} type="submit">Finalizar compra</Button>
             </Form>
         </div>
     );

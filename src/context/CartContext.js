@@ -73,7 +73,9 @@ const CartContext = ({ children }) => {
                 hasItemsInCart,
                 calculateTotal,
                 clearCart, 
-                 UserInfo,setUserInfo, setOrdenId
+                UserInfo,
+                setUserInfo, 
+                setOrdenId
             }}
         >
             {children}

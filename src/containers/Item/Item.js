@@ -13,9 +13,7 @@ export const Item = ({ id, nombre, imagen, precio, llave }) => {
                         <div className="d-flex justify-content-between align-items-center">
 
                             <div className="d-flex">
-
                                 <p className="">Precio: {precio}</p>
-             
                             </div>
                         </div>
                         <div>

@@ -22,7 +22,7 @@ Saludable es un E-commerce conformado por los distintos desafíos realizados a l
 Para la elaboración de este proyecto se utilizaron las siguientes herramientas:
 
 - React JS (librería principal)
-- Bulma CSS (estilos y diseño responsive).
+- CSS (estilos y diseño responsive).
 - React Router Dom (navegación).
 - Firebase (alojamiento de datos).
 
@@ -45,18 +45,17 @@ Para la elaboración de este proyecto se utilizaron las siguientes herramientas:
 
 ### Sección principal
 
-- Muestra los productos todos los productos.
+- Muestra todos los productos.
 
 ### Sección de detalles
 
-- Muestra información extendida del producto buscado o seleccionado.
+- Muestra información extendida del producto seleccionado.
 - Puede seleccionar la cantidad que desea comprar.
-- Puede añadirlo al carrito. Será redireccionado al carrito de compras.
+- Puede añadirlo al carrito donde será redireccionado a la transaccion en curso.
 
 ### Carrito de compras
 
-- Muestra un resumen de la compra a realizar junto al formulario para finalizar la transacción.
+- Muestra un resumen de la transaccion en proceso junto al formulario para finalizar la compra.
 - Puede eliminar un producto en específico o bien vaciar el carrito por completo.
-- Todos los datos ingresados en el formulario serán validados previamente a enviar su pedido.
-- Una vez finalizada su compra, será notificado sobre el estado de la operación.
-  - Si la operación fue exitosa, se le brindará el número de identificación de la transacción realizada.
+- Todos los datos ingresados en el formulario serán validados previamente antes de enviar su pedido.
+- Una vez finalizada su compra, se le brindará el número de identificación de la transacción realizada.

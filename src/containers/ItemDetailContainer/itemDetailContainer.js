@@ -18,7 +18,7 @@ export const ItemDetailContainer = () => {
             .catch((e) => { console.log("Ha ocurrido un error") });
     }, []); */
      const {productoID} = useParams();
-    useEffect(() => {
+     useEffect(() => {
         const db = getFirestore();
         const itemCollection = db.collection("Item");
         console.log(itemCollection);
@@ -34,7 +34,8 @@ export const ItemDetailContainer = () => {
     return (
         <div>
             {
-                produ.filter(producto => producto.llave === productoID)
+                produ
+                    .filter(producto => producto.llave === productoID)
                     .map((producto) => {
                         return <ItemDetails producto={producto} />
                     })

@@ -1,4 +1,3 @@
-import ImgPrueba from '../ItemList/ImgList1.png';
 export const productos = [
     {
         id: "1",
