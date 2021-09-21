@@ -9,7 +9,7 @@ Saludable es un E-commerce conformado por los distintos desafíos realizados a l
     alt="GIF animado donde se muestran algunas funcionalidades del proyecto"
     with="350" 
     height="350" 
-    src="https://media.giphy.com/media/8lM0ZQ8frDITvQxzL8/giphy.gif?cid=790b761166b00bda63d16c2a761c7230d3c439d7f0964814&rid=giphy.gif&ct=g" 
+    src="https://media.giphy.com/media/uW42eo6ZWqHwvXddXt/giphy.gif?cid=790b7611dca009b5aa26dfdf3417bc616858e15578dce4a6&rid=giphy.gif&ct=g" 
   />
   <figcaption>GIF animado donde se muestran algunas funcionalidades que ofrece</figcaption>
 </figure>
