@@ -56,7 +56,7 @@ export const CartContainer = () => {
                 </div> :
                 <div className="box">
                     <div className="is-flex is-align-items-center is-justify-content-space-between mb-3">
-                        <p className="is-size-3 p-1 has-text-weight-bold">Tu Carrito</p>
+                        <h5>Tu Carrito</h5>
                         <p className="is-size-4 p-1">
                             {`${getItemsCount()} ${getItemsCount() > 1 ? "Productos" : "Producto"}`}
                         </p>
@@ -92,6 +92,9 @@ export const CartContainer = () => {
                             Limpiar Carrito
                         </button>
                     </div>
+                    <br/>
+                    <h5>Datos del comprador</h5>
+                    <br/>
                     <CartForm/>
                 </div>    
             }
